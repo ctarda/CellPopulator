@@ -27,19 +27,10 @@ final class TypeErasedDataSource<Cell, Populator>: NSObject, UITableViewDataSour
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataManager.sectionCount()
-//        guard let decorating = decorating else {
-//            return dataManager.sectionCount()
-//        }
-//
-//        return decorating.numberOfSections?(in: tableView) ?? 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataManager.itemCount(section) ?? 0
-//        guard let decorating = decorating else {
-//            return dataManager.itemCount(section) ?? 0
-//        }
-//        return decorating.tableView(tableView, numberOfRowsInSection: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
