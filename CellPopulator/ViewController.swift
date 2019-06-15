@@ -39,16 +39,16 @@ class ViewController: UIViewController {
     private func prepareDataSource() {
         let data = DataModel().data()
         let dataManager = SectionedDataManager(data: data)
-        let coconutDataSource = TypeErasedDataSource(dataManager: dataManager,
+        let coconutDataSource = DecorableDataSource(dataManager: dataManager,
                                                      cellType: CoconutTableViewCell.self,
                                                      populator: CoconutPopulator())
 
-        let developerDataSource = TypeErasedDataSource(dataManager: dataManager,
+        let developerDataSource = DecorableDataSource(dataManager: dataManager,
                                                      cellType: DeveloperTableViewCell.self,
                                                      populator: DeveloperPopulator(),
                                                      decorating: coconutDataSource)
 
-        let carDataSource = TypeErasedDataSource(dataManager: dataManager,
+        let carDataSource = DecorableDataSource(dataManager: dataManager,
                                                        cellType: CarTableViewCell.self,
                                                        populator: CarPopulator(),
                                                        decorating: developerDataSource)

@@ -15,11 +15,5 @@ final class DeveloperTableViewCell: UITableViewCell, DataSettableCell {
         didSet {
             developerName.text = data?.name
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
+    }    
 }

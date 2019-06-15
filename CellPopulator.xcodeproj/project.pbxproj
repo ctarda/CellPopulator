@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8B7463C22B4E5FF005486C5 /* DecorableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */; };
 		D8BEC23122B4CB1900B4E83A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23022B4CB1900B4E83A /* AppDelegate.swift */; };
 		D8BEC23322B4CB1900B4E83A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23222B4CB1900B4E83A /* SceneDelegate.swift */; };
 		D8BEC23522B4CB1900B4E83A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23422B4CB1900B4E83A /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		D8BEC24522B4CB2800B4E83A /* CellPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC24422B4CB2800B4E83A /* CellPopulator.swift */; };
 		D8BEC24722B4CEE500B4E83A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC24622B4CEE500B4E83A /* DataManager.swift */; };
 		D8BEC24922B4CF0800B4E83A /* SectionedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC24822B4CF0800B4E83A /* SectionedDataManager.swift */; };
-		D8BEC24D22B4CF8B00B4E83A /* TypeErasedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC24C22B4CF8B00B4E83A /* TypeErasedDataSource.swift */; };
 		D8BEC24F22B4D4EE00B4E83A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC24E22B4D4EE00B4E83A /* DataModel.swift */; };
 		D8BEC25222B4D56C00B4E83A /* CoconutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC25022B4D56C00B4E83A /* CoconutTableViewCell.swift */; };
 		D8BEC25322B4D56C00B4E83A /* CoconutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8BEC25122B4D56C00B4E83A /* CoconutTableViewCell.xib */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecorableDataSource.swift; sourceTree = "<group>"; };
 		D8BEC22D22B4CB1900B4E83A /* CellPopulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellPopulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BEC23022B4CB1900B4E83A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8BEC23222B4CB1900B4E83A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		D8BEC24422B4CB2800B4E83A /* CellPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPopulator.swift; sourceTree = "<group>"; };
 		D8BEC24622B4CEE500B4E83A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D8BEC24822B4CF0800B4E83A /* SectionedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedDataManager.swift; sourceTree = "<group>"; };
-		D8BEC24C22B4CF8B00B4E83A /* TypeErasedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeErasedDataSource.swift; sourceTree = "<group>"; };
 		D8BEC24E22B4D4EE00B4E83A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D8BEC25022B4D56C00B4E83A /* CoconutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoconutTableViewCell.swift; sourceTree = "<group>"; };
 		D8BEC25122B4D56C00B4E83A /* CoconutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoconutTableViewCell.xib; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 		D8BEC22F22B4CB1900B4E83A /* CellPopulator */ = {
 			isa = PBXGroup;
 			children = (
+				D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */,
 				D8BEC25022B4D56C00B4E83A /* CoconutTableViewCell.swift */,
 				D8BEC25122B4D56C00B4E83A /* CoconutTableViewCell.xib */,
 				D8BEC25522B4D57F00B4E83A /* CarTableViewCell.swift */,
@@ -102,7 +103,6 @@
 				D8BEC24422B4CB2800B4E83A /* CellPopulator.swift */,
 				D8BEC24622B4CEE500B4E83A /* DataManager.swift */,
 				D8BEC24822B4CF0800B4E83A /* SectionedDataManager.swift */,
-				D8BEC24C22B4CF8B00B4E83A /* TypeErasedDataSource.swift */,
 				D8BEC24E22B4D4EE00B4E83A /* DataModel.swift */,
 				D8BEC25C22B4D5C600B4E83A /* CoconutPopulator.swift */,
 				D8BEC25E22B4D92C00B4E83A /* DeveloperDataSource.swift */,
@@ -193,11 +193,11 @@
 				D8BEC23522B4CB1900B4E83A /* ViewController.swift in Sources */,
 				D8BEC23122B4CB1900B4E83A /* AppDelegate.swift in Sources */,
 				D8BEC23322B4CB1900B4E83A /* SceneDelegate.swift in Sources */,
+				D8B7463C22B4E5FF005486C5 /* DecorableDataSource.swift in Sources */,
 				D8BEC25D22B4D5C600B4E83A /* CoconutPopulator.swift in Sources */,
 				D8BEC25F22B4D92C00B4E83A /* DeveloperDataSource.swift in Sources */,
 				D8BEC24F22B4D4EE00B4E83A /* DataModel.swift in Sources */,
 				D8BEC25222B4D56C00B4E83A /* CoconutTableViewCell.swift in Sources */,
-				D8BEC24D22B4CF8B00B4E83A /* TypeErasedDataSource.swift in Sources */,
 				D8BEC25922B4D58000B4E83A /* CarTableViewCell.swift in Sources */,
 				D8BEC24922B4CF0800B4E83A /* SectionedDataManager.swift in Sources */,
 				D8BEC26122B4DA4000B4E83A /* DeveloperPopulator.swift in Sources */,
