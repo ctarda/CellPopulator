@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D8B7463C22B4E5FF005486C5 /* DecorableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */; };
+		D8B7464122B4E83C005486C5 /* DataSettableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7464022B4E83C005486C5 /* DataSettableCell.swift */; };
+		D8B7464422B4E869005486C5 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7464322B4E869005486C5 /* ModelObject.swift */; };
 		D8BEC23122B4CB1900B4E83A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23022B4CB1900B4E83A /* AppDelegate.swift */; };
 		D8BEC23322B4CB1900B4E83A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23222B4CB1900B4E83A /* SceneDelegate.swift */; };
 		D8BEC23522B4CB1900B4E83A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC23422B4CB1900B4E83A /* ViewController.swift */; };
@@ -25,13 +27,14 @@
 		D8BEC25A22B4D58000B4E83A /* DeveloperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8BEC25622B4D58000B4E83A /* DeveloperTableViewCell.xib */; };
 		D8BEC25B22B4D58000B4E83A /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8BEC25722B4D58000B4E83A /* CarTableViewCell.xib */; };
 		D8BEC25D22B4D5C600B4E83A /* CoconutPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC25C22B4D5C600B4E83A /* CoconutPopulator.swift */; };
-		D8BEC25F22B4D92C00B4E83A /* DeveloperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC25E22B4D92C00B4E83A /* DeveloperDataSource.swift */; };
 		D8BEC26122B4DA4000B4E83A /* DeveloperPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC26022B4DA4000B4E83A /* DeveloperPopulator.swift */; };
 		D8BEC26322B4DFDA00B4E83A /* CarPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEC26222B4DFDA00B4E83A /* CarPopulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecorableDataSource.swift; sourceTree = "<group>"; };
+		D8B7464022B4E83C005486C5 /* DataSettableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSettableCell.swift; sourceTree = "<group>"; };
+		D8B7464322B4E869005486C5 /* ModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		D8BEC22D22B4CB1900B4E83A /* CellPopulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellPopulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BEC23022B4CB1900B4E83A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8BEC23222B4CB1900B4E83A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		D8BEC25622B4D58000B4E83A /* DeveloperTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeveloperTableViewCell.xib; sourceTree = "<group>"; };
 		D8BEC25722B4D58000B4E83A /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		D8BEC25C22B4D5C600B4E83A /* CoconutPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoconutPopulator.swift; sourceTree = "<group>"; };
-		D8BEC25E22B4D92C00B4E83A /* DeveloperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDataSource.swift; sourceTree = "<group>"; };
 		D8BEC26022B4DA4000B4E83A /* DeveloperPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPopulator.swift; sourceTree = "<group>"; };
 		D8BEC26222B4DFDA00B4E83A /* CarPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPopulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8B7463D22B4E7F8005486C5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D8B7463E22B4E803005486C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8B7463F22B4E821005486C5 /* Populators */,
+				D8BEC25022B4D56C00B4E83A /* CoconutTableViewCell.swift */,
+				D8BEC25122B4D56C00B4E83A /* CoconutTableViewCell.xib */,
+				D8BEC25422B4D57F00B4E83A /* DeveloperTableViewCell.swift */,
+				D8BEC25622B4D58000B4E83A /* DeveloperTableViewCell.xib */,
+				D8BEC25522B4D57F00B4E83A /* CarTableViewCell.swift */,
+				D8BEC25722B4D58000B4E83A /* CarTableViewCell.xib */,
+				D8B7464022B4E83C005486C5 /* DataSettableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D8B7463F22B4E821005486C5 /* Populators */ = {
+			isa = PBXGroup;
+			children = (
+				D8BEC24422B4CB2800B4E83A /* CellPopulator.swift */,
+				D8BEC25C22B4D5C600B4E83A /* CoconutPopulator.swift */,
+				D8BEC26022B4DA4000B4E83A /* DeveloperPopulator.swift */,
+				D8BEC26222B4DFDA00B4E83A /* CarPopulator.swift */,
+			);
+			path = Populators;
+			sourceTree = "<group>";
+		};
+		D8B7464222B4E85F005486C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8BEC24E22B4D4EE00B4E83A /* DataModel.swift */,
+				D8B7464322B4E869005486C5 /* ModelObject.swift */,
+				D8BEC24622B4CEE500B4E83A /* DataManager.swift */,
+				D8BEC24822B4CF0800B4E83A /* SectionedDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D8BEC22422B4CB1900B4E83A = {
 			isa = PBXGroup;
 			children = (
@@ -86,13 +133,9 @@
 		D8BEC22F22B4CB1900B4E83A /* CellPopulator */ = {
 			isa = PBXGroup;
 			children = (
-				D8B7463B22B4E5FF005486C5 /* DecorableDataSource.swift */,
-				D8BEC25022B4D56C00B4E83A /* CoconutTableViewCell.swift */,
-				D8BEC25122B4D56C00B4E83A /* CoconutTableViewCell.xib */,
-				D8BEC25522B4D57F00B4E83A /* CarTableViewCell.swift */,
-				D8BEC25722B4D58000B4E83A /* CarTableViewCell.xib */,
-				D8BEC25422B4D57F00B4E83A /* DeveloperTableViewCell.swift */,
-				D8BEC25622B4D58000B4E83A /* DeveloperTableViewCell.xib */,
+				D8B7464222B4E85F005486C5 /* Model */,
+				D8B7463E22B4E803005486C5 /* Cells */,
+				D8B7463D22B4E7F8005486C5 /* DataSource */,
 				D8BEC23022B4CB1900B4E83A /* AppDelegate.swift */,
 				D8BEC23222B4CB1900B4E83A /* SceneDelegate.swift */,
 				D8BEC23422B4CB1900B4E83A /* ViewController.swift */,
@@ -100,14 +143,6 @@
 				D8BEC23922B4CB1A00B4E83A /* Assets.xcassets */,
 				D8BEC23B22B4CB1A00B4E83A /* LaunchScreen.storyboard */,
 				D8BEC23E22B4CB1A00B4E83A /* Info.plist */,
-				D8BEC24422B4CB2800B4E83A /* CellPopulator.swift */,
-				D8BEC24622B4CEE500B4E83A /* DataManager.swift */,
-				D8BEC24822B4CF0800B4E83A /* SectionedDataManager.swift */,
-				D8BEC24E22B4D4EE00B4E83A /* DataModel.swift */,
-				D8BEC25C22B4D5C600B4E83A /* CoconutPopulator.swift */,
-				D8BEC25E22B4D92C00B4E83A /* DeveloperDataSource.swift */,
-				D8BEC26022B4DA4000B4E83A /* DeveloperPopulator.swift */,
-				D8BEC26222B4DFDA00B4E83A /* CarPopulator.swift */,
 			);
 			path = CellPopulator;
 			sourceTree = "<group>";
@@ -192,15 +227,16 @@
 				D8BEC26322B4DFDA00B4E83A /* CarPopulator.swift in Sources */,
 				D8BEC23522B4CB1900B4E83A /* ViewController.swift in Sources */,
 				D8BEC23122B4CB1900B4E83A /* AppDelegate.swift in Sources */,
+				D8B7464422B4E869005486C5 /* ModelObject.swift in Sources */,
 				D8BEC23322B4CB1900B4E83A /* SceneDelegate.swift in Sources */,
 				D8B7463C22B4E5FF005486C5 /* DecorableDataSource.swift in Sources */,
 				D8BEC25D22B4D5C600B4E83A /* CoconutPopulator.swift in Sources */,
-				D8BEC25F22B4D92C00B4E83A /* DeveloperDataSource.swift in Sources */,
 				D8BEC24F22B4D4EE00B4E83A /* DataModel.swift in Sources */,
 				D8BEC25222B4D56C00B4E83A /* CoconutTableViewCell.swift in Sources */,
 				D8BEC25922B4D58000B4E83A /* CarTableViewCell.swift in Sources */,
 				D8BEC24922B4CF0800B4E83A /* SectionedDataManager.swift in Sources */,
 				D8BEC26122B4DA4000B4E83A /* DeveloperPopulator.swift in Sources */,
+				D8B7464122B4E83C005486C5 /* DataSettableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
