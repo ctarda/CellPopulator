@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
         registerCells()
 
@@ -23,6 +22,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Cell registration
 private extension ViewController {
     private func registerCells() {
         registerCoconutCell()
@@ -49,6 +49,7 @@ private extension ViewController {
     }
 }
 
+// MARK: - Build datasource
 private extension ViewController {
     private func prepareDataSource() {
         let data = DataModel().data()

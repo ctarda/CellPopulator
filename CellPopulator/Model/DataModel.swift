@@ -7,28 +7,25 @@
 //
 
 import Foundation
-struct Coconut {
+// MARK: - Model objects
+struct Coconut: ModelObject {
     let weight: Int
 }
 
-extension Coconut: ModelObject {}
-
-struct Car {
+struct Car: ModelObject {
     let make: String
     let model: String
     let wheelCount: Int
 }
 
-extension Car: ModelObject {}
-
-struct Developer {
+struct Developer: ModelObject {
     let name: String
     let language: String
 }
 
-extension Developer: ModelObject {}
-
+// MARK: - Data model
 final class DataModel {
+    // The section order is important, as data will be rendered in this precise order
     func data() -> [Int: [ModelObject]] {
         return [0: twoCoconuts(),
                 1: oneCar(),
