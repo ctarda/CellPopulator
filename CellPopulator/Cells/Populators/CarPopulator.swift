@@ -9,13 +9,7 @@
 import Foundation
 
 struct CarPopulator: CellPopulator {
-    func supports(_ object: ModelObject) -> Bool {
-        return object is Car
-    }
-
-    func populate(_ cell: CarTableViewCell, with: ModelObject) {
-        cell.data = with as? Car
-    }
+    typealias CellType = CarTableViewCell
 
     static func build() -> CarPopulator {
         return CarPopulator()

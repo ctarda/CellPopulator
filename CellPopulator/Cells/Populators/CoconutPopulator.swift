@@ -9,13 +9,7 @@
 import Foundation
 
 struct CoconutPopulator: CellPopulator {
-    func supports(_ object: ModelObject) -> Bool {
-        return object is Coconut
-    }
-
-    func populate(_ cell: CoconutTableViewCell, with: ModelObject) {
-        cell.data = with as? Coconut
-    }
+    typealias CellType = CoconutTableViewCell
 
     static func build() -> CoconutPopulator {
         return CoconutPopulator()
