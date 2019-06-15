@@ -21,42 +21,54 @@ class ViewController: UIViewController {
 
         prepareDataSource()
     }
+}
 
+private extension ViewController {
     private func registerCells() {
-        let cellIdentifier = CoconutTableViewCell.cellReuseIdentifier()
-        let nibName = UINib(nibName: cellIdentifier, bundle: nil)
-        table.register(nibName, forCellReuseIdentifier: cellIdentifier)
-
-        let devCellIdentifier = DeveloperTableViewCell.cellReuseIdentifier()
-        let devNibName = UINib(nibName: devCellIdentifier, bundle: nil)
-        table.register(devNibName, forCellReuseIdentifier: devCellIdentifier)
-
-        let carCellIdentifier = CarTableViewCell.cellReuseIdentifier()
-        let carNibName = UINib(nibName: carCellIdentifier, bundle: nil)
-        table.register(carNibName, forCellReuseIdentifier: carCellIdentifier)
+        registerCoconutCell()
+        registerDevCell()
+        registerCarCell()
     }
 
+    private func registerCoconutCell() {
+        registerCell(type: CoconutTableViewCell.self)
+    }
+
+    private func registerDevCell() {
+        registerCell(type: DeveloperTableViewCell.self)
+    }
+
+    private func registerCarCell() {
+        registerCell(type: CarTableViewCell.self)
+    }
+
+    private func registerCell<T: DataSettableCell>(type: T.Type) {
+        let identifier = type.cellReuseIdentifier()
+        let nibName = UINib(nibName: identifier, bundle: nil)
+        table.register(nibName, forCellReuseIdentifier: identifier)
+    }
+}
+
+private extension ViewController {
     private func prepareDataSource() {
         let data = DataModel().data()
         let dataManager = SectionedDataManager(data: data)
         let coconutDataSource = DecorableDataSource(dataManager: dataManager,
-                                                     cellType: CoconutTableViewCell.self,
-                                                     populator: CoconutPopulator.self)
+                                                    cellType: CoconutTableViewCell.self,
+                                                    populator: CoconutPopulator.self)
 
         let developerDataSource = DecorableDataSource(dataManager: dataManager,
-                                                     cellType: DeveloperTableViewCell.self,
-                                                     populator: DeveloperPopulator.self,
-                                                     decorating: coconutDataSource)
+                                                      cellType: DeveloperTableViewCell.self,
+                                                      populator: DeveloperPopulator.self,
+                                                      decorating: coconutDataSource)
 
         let carDataSource = DecorableDataSource(dataManager: dataManager,
-                                                       cellType: CarTableViewCell.self,
-                                                       populator: CarPopulator.self,
-                                                       decorating: developerDataSource)
+                                                cellType: CarTableViewCell.self,
+                                                populator: CarPopulator.self,
+                                                decorating: developerDataSource)
 
-        //dataSource = coconutDataSource
         dataSource = carDataSource
 
         table.dataSource = dataSource
     }
 }
-
