@@ -25,6 +25,7 @@ extension CellPopulator {
     }
 
     func populate(_ cell: CellType, with: ModelObject) {
+        // Make a mutable copy to prevent a compiler error
         var cell = cell
         cell.data = with as? CellType.DataType
     }
