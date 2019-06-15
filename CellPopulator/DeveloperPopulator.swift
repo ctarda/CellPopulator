@@ -16,4 +16,8 @@ struct DeveloperPopulator: CellPopulator {
     func populate(_ cell: DeveloperTableViewCell, with: ModelObject) {
         cell.data = with as? Developer
     }
+
+    static func build() -> DeveloperPopulator {
+        return DeveloperPopulator()
+    }
 }

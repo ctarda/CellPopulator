@@ -18,10 +18,10 @@ final class DecorableDataSource<Cell, Populator>: NSObject, UITableViewDataSourc
 
     init(dataManager: DataManager,
          cellType: Cell.Type,
-         populator: Populator,
+         populator: Populator.Type,
          decorating: UITableViewDataSource? = nil) {
         self.dataManager = dataManager
-        self.populator = populator
+        self.populator = populator.build()
         self.decorating = decorating
     }
 

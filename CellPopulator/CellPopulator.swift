@@ -15,6 +15,8 @@ protocol CellPopulator {
 
     func supports(_ object: ModelObject) -> Bool
     func populate(_ cell: CellType, with: ModelObject)
+
+    static func build() -> Self
 }
 
 // Cell

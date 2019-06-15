@@ -16,4 +16,8 @@ struct CarPopulator: CellPopulator {
     func populate(_ cell: CarTableViewCell, with: ModelObject) {
         cell.data = with as? Car
     }
+
+    static func build() -> CarPopulator {
+        return CarPopulator()
+    }
 }

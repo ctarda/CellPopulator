@@ -16,4 +16,8 @@ struct CoconutPopulator: CellPopulator {
     func populate(_ cell: CoconutTableViewCell, with: ModelObject) {
         cell.data = with as? Coconut
     }
+
+    static func build() -> CoconutPopulator {
+        return CoconutPopulator()
+    }
 }
