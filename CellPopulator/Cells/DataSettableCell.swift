@@ -1,14 +1,6 @@
-//
-//  DataSettableCell.swift
-//  CellPopulator
-//
-//  Created by Cesar Tardaguila on 15/6/2019.
-//  Copyright © 2019 automattic. All rights reserved.
-//
-
 import Foundation
 
-// Cell
+/// Cell
 protocol DataSettableCell {
     associatedtype DataType
     var data: DataType? {get set}

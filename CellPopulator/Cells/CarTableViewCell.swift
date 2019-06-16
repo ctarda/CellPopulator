@@ -1,11 +1,3 @@
-//
-//  CarTableViewCell.swift
-//  DataSources
-//
-//  Created by Cesar Tardaguila on 1/6/2019.
-//  Copyright © 2019 bambooapps. All rights reserved.
-//
-
 import UIKit
 
 final class CarTableViewCell: UITableViewCell, DataSettableCell {
