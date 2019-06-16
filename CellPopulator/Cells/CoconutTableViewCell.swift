@@ -5,7 +5,7 @@ final class CoconutTableViewCell: UITableViewCell, DataSettableCell {
     
     var data: Coconut? {
         didSet {
-            weight.text = "weight \(data?.weight ?? 0)"
+            weight.text = "Coconut of weight: \(data?.weight ?? 0)"
         }
     }    
 }

@@ -37,7 +37,7 @@ final class DataModel {
     }
 
     func twoDevelopers() -> [ModelObject] {
-        return [Developer(name: "Dev 1", language: "Swift"),
-                Developer(name: "Dev 2", language: "Kotlin")]
+        return [Developer(name: "Archibald", language: "Swift"),
+                Developer(name: "Ada", language: "Kotlin")]
     }
 }

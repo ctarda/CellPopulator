@@ -6,7 +6,7 @@ final class CarTableViewCell: UITableViewCell, DataSettableCell {
     
     var data: Car? {
         didSet {
-            carMake.text = data?.make
+            carMake.text = "Car. Make \(data?.make ?? "") model \(data?.model ?? "")"
         }
     }
 }

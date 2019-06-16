@@ -5,7 +5,7 @@ final class DeveloperTableViewCell: UITableViewCell, DataSettableCell {
     
     var data: Developer? {
         didSet {
-            developerName.text = data?.name
+            developerName.text = "A Developer named \(data?.name ?? "")"
         }
     }    
 }
