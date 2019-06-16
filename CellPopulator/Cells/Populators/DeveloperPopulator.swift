@@ -10,8 +10,4 @@ import Foundation
 
 struct DeveloperPopulator: CellPopulator {
     typealias CellType = DeveloperTableViewCell
-
-    static func build() -> DeveloperPopulator {
-        return DeveloperPopulator()
-    }
 }

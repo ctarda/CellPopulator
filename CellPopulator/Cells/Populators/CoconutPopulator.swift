@@ -10,8 +10,4 @@ import Foundation
 
 struct CoconutPopulator: CellPopulator {
     typealias CellType = CoconutTableViewCell
-
-    static func build() -> CoconutPopulator {
-        return CoconutPopulator()
-    }
 }
