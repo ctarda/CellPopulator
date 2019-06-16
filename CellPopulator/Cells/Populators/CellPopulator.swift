@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
+/// Abstracts anything that can be initialised via `init()`
 protocol Initializable {
     init()
 }
 
-// Cell Populator
+/// Cell Populator
 protocol CellPopulator: Initializable {
     associatedtype CellType: UITableViewCell, DataSettableCell
 
@@ -21,6 +22,7 @@ protocol CellPopulator: Initializable {
     func populate(_ cell: CellType, with: ModelObject)
 }
 
+/// Default implementation of the CellPopulator protocol
 extension CellPopulator {
     func supports(_ object: ModelObject) -> Bool {
         return object is CellType.DataType
