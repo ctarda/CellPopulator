@@ -21,7 +21,7 @@ final class DecorableDataSource<Cell, Populator>: NSObject, UITableViewDataSourc
          populator: Populator.Type,
          decorating: UITableViewDataSource? = nil) {
         self.dataManager = dataManager
-        self.populator = populator.build()
+        self.populator = populator.init()
         self.decorating = decorating
     }
 

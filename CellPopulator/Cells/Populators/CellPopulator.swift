@@ -16,9 +16,7 @@ protocol CellPopulator {
     func supports(_ object: ModelObject) -> Bool
     func populate(_ cell: CellType, with: ModelObject)
 
-    static func build() -> Self
-
-    /// Declared as part of the protocol to be able to inistantiate in an extension
+    /// Enforce an initialiser
     init()
 }
 
@@ -31,9 +29,5 @@ extension CellPopulator {
         // Make a mutable copy to prevent a compiler error
         var cell = cell
         cell.data = with as? CellType.DataType
-    }
-
-    static func build() -> Self {
-        Self.init()
     }
 }
