@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class DecorableDataSource<Cell, Populator>: NSObject, UITableViewDataSource where Cell: DataSettableCell, Cell: UITableViewCell, Populator: CellPopulator, Populator.CellType == Cell {
+final class DecorableDataSource<Cell, Populator>: NSObject, UITableViewDataSource where Populator: CellPopulator, Populator.CellType == Cell {
 
     private let dataManager: DataManager
     private let populator: Populator
