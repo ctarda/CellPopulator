@@ -9,15 +9,16 @@
 import Foundation
 import UIKit
 
+protocol Initializable {
+    init()
+}
+
 // Cell Populator
-protocol CellPopulator {
+protocol CellPopulator: Initializable {
     associatedtype CellType: UITableViewCell, DataSettableCell
 
     func supports(_ object: ModelObject) -> Bool
     func populate(_ cell: CellType, with: ModelObject)
-
-    /// Enforce an initialiser
-    init()
 }
 
 extension CellPopulator {
