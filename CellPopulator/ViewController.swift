@@ -47,9 +47,17 @@ private extension ViewController {
         let data = DataModel().data()
         let dataManager = SectionedDataManager(data: data)
 
-        let coconuts = buildDataSource(dataManager: dataManager, cellType: CoconutTableViewCell.self, populator: CoconutPopulator.self)
-        let developers = buildDataSource(dataManager: dataManager, cellType: DeveloperTableViewCell.self, populator: DeveloperPopulator.self, decorating: coconuts)
-        let cars = buildDataSource(dataManager: dataManager, cellType: CarTableViewCell.self, populator: CarPopulator.self, decorating: developers)
+        let coconuts = buildDataSource(dataManager: dataManager,
+                                       cellType: CoconutTableViewCell.self,
+                                       populator: CoconutPopulator.self)
+        let developers = buildDataSource(dataManager: dataManager,
+                                         cellType: DeveloperTableViewCell.self,
+                                         populator: DeveloperPopulator.self,
+                                         decorating: coconuts)
+        let cars = buildDataSource(dataManager: dataManager,
+                                   cellType: CarTableViewCell.self,
+                                   populator: CarPopulator.self,
+                                   decorating: developers)
 
         dataSource = cars
 
